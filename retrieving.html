@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Transaction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f1c40f;
+        }
+        .row {
+            margin-bottom: 15px;
+        }
+        .row label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        .row input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #f1c40f;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #d4ac0d;
+        }
+        .forget-btn {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #f1c40f;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .forget-btn:hover {
+            color: #d4ac0d;
+        }
+        .result-container {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 5px;
+            color: #fff;
+            display: none;
+        }
+        .result-container p {
+            margin: 0 0 10px;
+            font-size: 14px;
+            color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Retrieve Transaction</h2>
+        <form id="retrieve-form">
+            <div class="row">
+                <label for="product-id">Product ID</label>
+                <input type="text" id="product-id" placeholder="Enter product ID" required>
+            </div>
+            <div class="row">
+                <label for="private-key">Private Key</label>
+                <input type="text" id="private-key" placeholder="Enter private key" required>
+            </div>
+            <div class="row">
+                <button type="submit" class="submit-btn">Retrieve Now</button>
+            </div>
+        </form>
+
+        <!-- Forget ID or Password Button -->
+        <a href="#" class="forget-btn">Forget ID or Key</a>
+
+        <!-- Result Container -->
+        <div id="result-container" class="result-container">
+            <p><strong>Buyer Name:</strong> John Doe</p>
+            <p><strong>Buyer ID:</strong> B123456</p>
+            <p><strong>Seller Name:</strong> Jane Smith</p>
+            <p><strong>Seller ID:</strong> S654321</p>
+            <p><strong>Date and Time of Purchase:</strong> 2024-08-17 15:30</p>
+            <p><strong>Item Description:</strong> Laptop</p>
+            <p><strong>Product ID:</strong> PROD-123456</p>
+            <p><strong>Personal Details:</strong> Some personal details</p>
+            <p><strong>Contact Details:</strong> contact@example.com</p>
+            <p><strong>Address:</strong> 123 Example Street, City, Country</p>
+            <p><strong>Local ID:</strong> L987654</p>
+            <p><strong>Uploaded File:</strong> invoice.pdf</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('retrieve-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Placeholder for actual retrieval logic
+            document.getElementById('result-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
